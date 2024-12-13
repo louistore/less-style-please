@@ -1,0 +1,20 @@
+{{ if .IsPage }}
+	<p datetime="{{ .Date }}" class="post-meta">Publish: {{ .Date | time.Format site.Params.theme_config.date_format }}</p>
+        
+	{{ if .Lastmod }}
+		{{ if gt .Lastmod .Date }}
+			 | <p datetime="{{ .Lastmod }}" class="post-meta">Update: {{ .Lastmod | time.Format site.Params.theme_config.date_format }}</p>
+		{{ end }}
+	{{ end }}
+
+    {{ if .Params.tags }}
+        <p class="post-meta">Tags: 
+        	{{ $length := len .Params.tags }} 
+        	{{ range $index, $tag := .Params.tags }}
+            {{ if $index }},{{ end }} 
+            	<a href="{{ "/tags/" | relURL }}{{ $tag | urlquery }}">#{{ $tag }}
+            	</a>
+			{{ end }}
+		</p>
+	{{ end }}  	
+{{ end }}
