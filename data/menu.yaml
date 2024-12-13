@@ -1,22 +1,17 @@
 entries:
   - title: info
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Hugo theme ported from <a
-          href='https://github.com/riggraz/no-style-please'>riggraz/no-style-please</a>.
+      - title: a (nearly) no-CSS, fast, minimalist Hugo theme forked from <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease'>hanwenguo/hugo-theme-nostyleplease</a>.
       - title: github repo
         url: https://github.com/hanwenguo/hugo-theme-nostyleplease
   - title: all posts
     post_list:
-      limit: 5
+      limit: 4
       show_more: true
       show_more_text: See archive...
       show_more_url: posts
-  - title: posts by category
-    post_list:
-      section: posts
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: posts
+  - title: Tags
+    url: "tags"
   - title: rss
     url: index.xml
   - title: another list
@@ -25,7 +20,8 @@ entries:
         entries:
           - title: with subsubitems
           - title: example page
-            url: about
+            url: "page/about"
   - title: PRO TIP
     entries:
       - title: to edit this menu, edit data/menu.toml file
+
