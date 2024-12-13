@@ -59,15 +59,15 @@
   @include theme(#ffffff, #212121, #666666, #1e70bf, #921292, #FFFF00);
 }
 
-body[a="dark"] { @include dark-appearance; }
-body[a="light"] { @include light-appearance; }
+body[themetoggle="dark"] { @include dark-appearance; }
+body[themetoggle="light"] { @include light-appearance; }
 
 @media (prefers-color-scheme: dark) {
-  body[a="auto"] { @include dark-appearance; }
+  body[themetoggle="auto"] { @include dark-appearance; }
 }
 
 @media (prefers-color-scheme: light) {
-  body[a="auto"] { @include light-appearance; }
+  body[themetoggle="auto"] { @include light-appearance; }
 }
 
 // -------------------------------------------- //
