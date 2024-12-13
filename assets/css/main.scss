@@ -52,11 +52,11 @@
 }
 
 @mixin dark-appearance {
-  @include theme(#212121, #fafafa, #000000, #0071bc, #a359e9, #FFFF00);
+  @include theme(#212121, #fafafa, #000000, #fafafa, #fafafa, #FFFF00);
 }
 
 @mixin light-appearance {
-  @include theme(#ffffff, #212121, #666666, #1e70bf, #921292, #FFFF00);
+  @include theme(#fffdfa, #212121, #666666, #212121, #212121, #FFFF00);
 }
 
 body[themetoggle="dark"] { @include dark-appearance; }
@@ -85,19 +85,25 @@ body {
 
 h2, h3, h4, h5, h6 { margin-top: 1.5rem; }
 
+h1 {
+    margin: 0.83em 0 0 0; 
+}
+
 p { margin: 1rem 0; }
 
 li { margin: 0.4rem 0; }
 
 a {
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
+  text-decoration: underline; 
+  &:hover { text-decoration: underline; } 
+  text-decoration-color: red;
+  text-underline-offset: 4px;
 }
 
 hr {
   text-align: center;
   border: 0;
-  margin: 2rem 0;
+  margin: 1rem 0;
 
   &:before { content: '/////' }
   &:after { content: attr(data-content) '/////' }
@@ -165,6 +171,12 @@ details[open] summary {
 }
 
 .post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
