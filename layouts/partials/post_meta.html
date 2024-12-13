@@ -8,12 +8,10 @@
 	{{ end }}
 
     {{ if .Params.tags }}
-        <p class="post-meta">Tags: 
-        	{{ $length := len .Params.tags }} 
+        <p class="post-meta">Tags:  
         	{{ range $index, $tag := .Params.tags }}
             {{ if $index }},{{ end }} 
-            	<a href="{{ "/tags/" | relURL }}{{ $tag | urlquery }}">#{{ $tag }}
-            	</a>
+            	<a href="{{ "/tags/" | relURL }}{{ $tag | urlquery }}">#{{ $tag }}</a>
 			{{ end }}
 		</p>
 	{{ end }}  	
