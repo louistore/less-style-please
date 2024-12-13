@@ -1,8 +1,35 @@
 {{ define "main" }}
 {{ partial "back_link.html" .}}
 
-<h1>{{ .Title }}</h1>
+<h1>#{{ .Title | safeHTML }}</h1>
 
-{{ .Content }}
-{{ partial "post_list.html" (dict "context" .)}}
+{{ if  .Site.Params.theme_config.isListGroupByDate  }}
+    {{ range .Pages.GroupByDate "2006 Year" }}
+        <p>{{ .Key }}</p>
+        <ul>
+            {{ range .Pages }}
+                <li>
+                    <time datetime="{{ .Date }}">
+                        {{ .Date | time.Format site.Params.theme_config.date_format }} 
+                    </time>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    {{ end }}
+{{ else }}
+		<ul>
+            {{ range .Pages }}
+                <li>
+                    <time datetime="{{ .Date }}">
+                        {{ .Date | time.Format site.Params.theme_config.date_format }} 
+                    </time>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+        </ul>
+{{ end }}
+
+{{ partial "footer.html" }}
+
 {{ end }}
