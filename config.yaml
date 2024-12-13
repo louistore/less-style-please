@@ -29,7 +29,8 @@ markup:
 params:
   theme_config:
     appearance: auto
-    back_home_text: ..
-    date_format: 2006-01-02
-    isListGroupByDate: false
+    back_home_text: "Home"
+    back_previous_text: "Back"
+    date_format: "2006/01/02"
+    isListGroupByDate: true
     isShowFooter: true
