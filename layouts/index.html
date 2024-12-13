@@ -7,6 +7,11 @@
     {{- end -}}
 </header>
 {{ .Content }}
+
+{{ partial "divider.html" . }}
+
 {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+
+{{ partial "footer.html" }}
 
 {{ end }}
