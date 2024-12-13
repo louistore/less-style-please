@@ -11,12 +11,24 @@
     <p>{{ .Key }}</p>
     <ul>
         {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            <li>
+            	<time datetime="{{ .Date }}">{{ .Date | time.Format site.Params.theme_config.date_format }} 
+                </time><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
         {{ end }}
     </ul>
     {{ end }}
 {{ else }}
-    {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+	<ul>
+        {{ range .Pages }}
+            <li>
+            	<time datetime="{{ .Date }}">{{ .Date | time.Format site.Params.theme_config.date_format }} 
+                </time><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
 {{ end }}
+
+{{ partial "footer.html" }}
 
 {{ end }}
