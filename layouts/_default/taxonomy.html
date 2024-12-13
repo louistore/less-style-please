@@ -3,6 +3,29 @@
 
 <h1>{{ .Title }}</h1>
 
-{{ .Content }}
-{{ partial "post_list.html" (dict "context" .)}}
+{{- if .Site.Taxonomies.tags -}}
+
+<ul>
+  {{- $tags := slice -}}
+  
+  {{- range $tag, $pages := .Site.Taxonomies.tags -}}
+    {{- $tags = $tags | append (dict "tag" $tag "count" (len $pages)) -}}
+  {{- end -}}
+  
+  {{- range sort $tags "count" "desc" -}}
+    <li>
+      <a href="{{ "/tags/" | relURL }}{{ .tag | urlquery }}">#{{ .tag }}</a> 
+      <span>({{ .count }})</span> 
+    </li>
+  {{- end -}}
+</ul>
+
+{{- else -}}
+
+<p>No Content yet</p>
+
+{{- end }}
+
+{{ partial "footer.html" }}
+
 {{ end }}
