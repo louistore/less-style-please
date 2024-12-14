@@ -4,7 +4,7 @@ entries:
       - title: A (nearly) no-CSS, fast, minimalist Hugo theme, forked from <a
           href='https://github.com/hanwenguo/hugo-theme-nostyleplease'>hanwenguo/hugo-theme-nostyleplease</a> and thanks for doing the transplant work.
       - title: My github repo
-        url: https://github.com/hanwenguo/hugo-theme-nostyleplease
+        url: https://github.com/loyistro/no-style-please
   - title: all posts
     post_list:
       limit: 4
@@ -20,9 +20,9 @@ entries:
       - title: with subitems
         entries:
           - title: with subsubitems
-          - title: example page
+          - title: About page
             url: "page/about"
   - title: PRO TIP
     entries:
-      - title: to edit this menu, edit data/menu.toml file
+      - title: to edit this menu, edit data/menu.yaml file
 
