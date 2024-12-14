@@ -1,12 +1,7 @@
 {{ if site.Params.theme_config.isShowFooter }}
-    {{ with resources.Get "layouts/footer.md" }}
-        {{ partial "divider.html" . }}
-        {{ .Content | markdownify }}
-    {{ else }}
-        {{ warnf "layouts/footer.md file is not found, fallback to the default copyright" }}
-        {{ partial "divider.html" . }}
+	{{ partial "divider.html" . }}
         <div class="footer">
             <p>&copy; {{ now.Format "2006" }} <a href="{{ "/" | relURL }}">{{ site.Title }}</a> | Powered by <a href="https://gohugo.io" target="_blank">Hugo</a></p>
         </div>
-    {{ end }}
+    {{ else }}
 {{ end }}
