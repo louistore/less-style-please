@@ -3,10 +3,10 @@
 <header>
     <h1>{{ $.Site.Title }}</h1>
     {{- if $.Site.Params.theme_config.show_description -}}
-        <p>{{ $.Site.Params.description }}</p>
+    	Edit description in no-style-please/layouts/index.html
+    {{ else }}
     {{- end -}}
 </header>
-{{ .Content }}
 
 {{ partial "divider.html" . }}
 
