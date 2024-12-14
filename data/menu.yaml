@@ -1,8 +1,9 @@
 entries:
   - title: info
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Hugo theme forked from <a href='https://github.com/hanwenguo/hugo-theme-nostyleplease'>hanwenguo/hugo-theme-nostyleplease</a>.
-      - title: github repo
+      - title: A (nearly) no-CSS, fast, minimalist Hugo theme, forked from <a
+          href='https://github.com/hanwenguo/hugo-theme-nostyleplease'>hanwenguo/hugo-theme-nostyleplease</a> and thanks for doing the transplant work.
+      - title: My github repo
         url: https://github.com/hanwenguo/hugo-theme-nostyleplease
   - title: all posts
     post_list:
