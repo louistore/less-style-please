@@ -34,7 +34,7 @@ cd demo-site-name
 run
 ```zsh
 git init
-git submodule add --depth=1 https://github.com/loyistro/no-style-please.gi
+git submodule add --depth=1 https://github.com/loyistro/no-style-please.git
 ```
 
 In `config.yaml` or `hugo.yaml` add:
